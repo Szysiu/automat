@@ -1,5 +1,5 @@
 <?php if(!empty($params['error'])): ?>
-    <div class="alert alert-danger">
+    <div class="alert alert-danger text-center alert-dismissible w-75 fade show" role="alert">
         <?php
         switch ($params['error']) {
             case '1':
@@ -17,16 +17,23 @@
             case '5':
                 echo 'Nie udało się uzupełnić tego produktu';
                 break;
+            case '6':
+                echo 'Odmowa dostępu';
+                break;
+            case '7':
+                echo 'Nie jesteś zalogowany';
+                break;
             default:
                 echo 'Wystąpił błąd';
                 break;
         }
         ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 <?php endif; ?>
 
 <?php if(!empty($params['message'])): ?>
-    <div class="alert alert-success">
+    <div class="alert alert-success alert-custom text-center alert-dismissible w-75 show" role="alert">
         <?php
         switch ($params['message']) {
             case 'logged':
@@ -43,5 +50,8 @@
                 break;
         }
         ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 <?php endif; ?>
+
+

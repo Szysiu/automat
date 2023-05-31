@@ -23,7 +23,7 @@ try {
     $controller->run();
 
 }catch (Exception $exception) {
-    echo $exception->getMessage();
+    echo "Wystąpił błąd";
     exit();
 }
 

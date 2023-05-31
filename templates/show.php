@@ -10,10 +10,16 @@ if ($params) :
             <h6 class="text-center mt-2"><?php echo $item->getCode();?></h6>
             <h6 class="text-center"><?php echo $item->getPrice();?></h6>
             <div class="input-group mb-2">
-                <input class="" type="number" name="amount" min="1" value="<?php echo $item->getAmount();?>">
-                <input type="number" name="id" hidden value="<?php echo $item->getId();?>">
+                <label>
+                    <button type="button" class="amount-btn" id="dec"><i class="fa-solid fa-minus"></i></button>
+                    <input class="ms-1 me-1" id="newAmount" type="number" name="amount" min="1" max="20" readonly value="<?php echo $item->getAmount();?>">
+                    <button type="button" class="amount-btn" id="inc"><i class="fa-solid fa-plus"></i></button>
+                </label>
+                <label>
+                    <input type="number" name="id" hidden value="<?php echo $item->getId();?>">
+                </label>
             </div>
-            <input type="submit" class="btn btn-outline-info"></input>
+            <input type="submit" value="Zapisz" class="btn btn-outline-info"></input>
         </div>
     </form>
 </div>

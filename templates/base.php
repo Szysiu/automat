@@ -6,20 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/22eb8150a9.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body>
-<div class="container mt-3">
-    <a href="/?action=main" class="logo">
-        <h1 class="text-center">AUTOMAT Z PRZEKĄSKAMI</h1>
-    </a>
-    <?php
-    require_once __DIR__.'/alerts.php';
-    ?>
+<body class="bg-custom_2 mb-5">
+<div class="container mt-3 mb-5">
+    <div class="row">
+        <div class="col-lg-12">
+           <div class="box shadow-lg p-3 border border-custom border-5 border-bottom-0 border-black overflow-hidden bg-custom">
+               <h1 class="text-center">
+                   <a href="/?action=main" class="logo">
+                       AUTOMAT Z PRZEKĄSKAMI
+                   </a>
+               </h1>
+               <div class="alerts d-flex justify-content-center">
+                   <?php
+                   require_once __DIR__.'/alerts.php';
+                   ?>
+               </div>
+           </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-12">
             <div class="box shadow-lg border border-5 border-black overflow-hidden bg-custom">
-                <div class="row row-custom">
+                <div class="row">
                     <div class="col-8 border-end border-5 border-black ps-5 pt-3">
                         <div class="row gy-3 d-flex justify-content-center text-white">
                             <?php
@@ -28,7 +39,7 @@
                             ?>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 right-panel">
                         <form class="text-center" method="post" action="/?action=buy">
                             <div class="row mt-4">
                                 <h2 class="text-center text-white">Wrzuć monetę</h2>
@@ -39,24 +50,24 @@
                                 <div class="d-inline-block mt-3">
                                     <label class="money">
                                         <input type="radio" name="radio" value="1">
-                                        <div class="coin d-flex align-items-center rounded-circle justify-content-center">
+                                        <div class="coin d-flex align-items-center rounded-circle justify-content-center one-zl">
                                             1Zł
                                         </div>
                                     </label>
                                     <label class="money">
                                         <input type="radio" name="radio" value="2">
-                                        <div class="coin d-flex align-items-center rounded-circle justify-content-center">
+                                        <div class="coin d-flex align-items-center rounded-circle justify-content-center two-zl">
                                             2Zł
                                         </div>
                                     </label>
                                     <label class="money">
                                         <input type="radio" name="radio" value="5">
-                                        <div class="coin d-flex align-items-center rounded-circle justify-content-center">
+                                        <div class="coin d-flex align-items-center rounded-circle justify-content-center five-zl">
                                             5Zł
                                         </div>
                                     </label><br>
                                     <button type="button" class="btn btn-outline-info mt-3" id="btn">Wrzuć</button>
-                                    <button type="reset" class="btn btn-outline-info mt-3">Reset</button>
+                                    <button type="button" id="reset1" class="btn btn-outline-info mt-3">Reset</button>
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -83,7 +94,7 @@
                                 <br>
                                 <div class="d-inline-block mt-2">
                                     <button type="button" class="btn-custom" value="0">0</button>
-                                    <button type="reset" class="btn btn-outline-info">Reset</button>
+                                    <button type="button" id="reset2" class="btn btn-outline-info">Reset</button>
                                 </div>
                                 <br>
                                 <div class="text-center">
@@ -91,9 +102,9 @@
                                 </div>
                             </div>
                         </form>
-                        <a href="/?action=fill" class="btn btn-outline-info mt-5">Uzupełnij automat</a>
+                        <a href="/?action=fill" class="btn btn-outline-info mt-5 mb-3">Uzupełnij automat</a>
                         <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']===true): ?>
-                            <a class="btn btn-outline-warning mt-5 ms-2" href="/?action=logout">Wyloguj</a>
+                            <a class="btn btn-outline-warning mt-5 ms-2 mb-3" href="/?action=logout">Wyloguj</a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -105,6 +116,8 @@
 
 <script src="assets/js/script.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/reset.js"></script>
+<script src="assets/js/amount.js"></script>
 </body>
 </html>
 

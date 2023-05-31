@@ -52,6 +52,8 @@ class ItemController extends AbstractController
                 $password = $this->request->postParam('password');
                 $this->userService->login($login, $password);
                 $this->redirect('/', ['message' => 'logged']);
+            }else {
+                $this->redirect('/',[]);
             }
         } catch (InvalidCretentialsExcption $e) {
             $this->redirect('/', ['error' => $e->getMessage()]);
@@ -60,9 +62,13 @@ class ItemController extends AbstractController
 
     #[NoReturn] public function logoutAction(): void
     {
-        $_SESSION = array();
-        session_destroy();
-        $this->redirect('/', ['message' => 'logout']);
+        if($this->isUserLogged()) {
+            $_SESSION = array();
+            session_destroy();
+            $this->redirect('/', ['message' => 'logout']);
+        } else {
+            $this->redirect('/', ['error' => '7']);
+        }
     }
 
     public function updateAction(): void
@@ -76,7 +82,10 @@ class ItemController extends AbstractController
             } catch (DatabaseException) {
                 $this->redirect('/', ['error' => '5']);
             }
+         } else if(!$this->isUserLogged()) {
+            $this->redirect('/', ['error' => '6']);
         }
+
     }
 
     /**
