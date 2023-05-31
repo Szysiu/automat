@@ -19,7 +19,7 @@
     height: 100%;
 }
 
-.money input:checked ~ .siema {
+.money input:checked ~ .coin {
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(25,128,217,1) 100%);
 }
@@ -27,12 +27,14 @@
 .money input {
     display: none;
 }
-.siema {
+.coin {
     background: lightgrey;
     padding: 10px;
     border: 2px solid transparent;
     width: 70px;
     cursor: pointer;
+    height: 70px;
+    transition: background 0.9s ease;
 }
 
 .btn-custom {
@@ -75,7 +77,21 @@
     color: white;
 }
 
-.col-2:hover {
+.item {
+    transition: background 0.7s ease;
+}
+
+.item:hover {
     background: white;
     color: black;
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+}
+
+.coin:hover
+{
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(25,128,217,1) 100%);
 }

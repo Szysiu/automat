@@ -12,7 +12,7 @@ services:
             - symfony_app_var:/var/www/symfony/var
             - symfony_app_vendor:/var/www/symfony/vendor
         networks:
-            - symfony_app
+            - automat
     nginx:
         container_name: automat-nginx
         build:
@@ -24,14 +24,13 @@ services:
         ports:
             - 8080:80
         networks:
-            - symfony_app
+            - automat
         env_file:
             - .env.nginx.local
 
 volumes:
     symfony_app_var:
     symfony_app_vendor:
-    db_app:
 
 networks:
-    symfony_app:
+    automat:

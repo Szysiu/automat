@@ -17,4 +17,5 @@ interface DatabaseManagerInterface
 
     public function updateItem(int $id,int $amount):void;
 
+
 }

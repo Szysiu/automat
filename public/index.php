@@ -16,6 +16,7 @@ try {
     $itemService = new ItemService($database);
 
     $userService=new UserService($database);
+    $userService->addUser();
     $loginController=new LoginController($request,$userService);
 
     $controller = new ItemController($itemService,$request,$userService);

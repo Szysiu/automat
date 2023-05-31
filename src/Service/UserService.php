@@ -13,12 +13,13 @@ class UserService
     public function __construct(DatabaseManagerInterface $databaseManager)
     {
         $this->databaseManager = $databaseManager;
-        $this->addUser();
     }
 
     public function addUser(): void
     {
-        $this->databaseManager->createUser('admin', 'admin');
+
+        $this->databaseManager->createUser('admin','admin');
+
     }
 
     /**

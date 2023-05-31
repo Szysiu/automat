@@ -9,54 +9,13 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container mt-5">
-    <?php if(!empty($params['error'])): ?>
-        <div class="alert alert-danger">
-            <?php
-            switch ($params['error']) {
-                case '1':
-                    echo 'Brak produktu o podanym kodzie';
-                    break;
-                case '2':
-                    echo 'Nie masz wystarczającej ilości środków';
-                    break;
-                case '3':
-                    echo 'Wybrany produkt się skończył';
-                    break;
-                case '4':
-                    echo 'Niepoprawny login lub hasło';
-                    break;
-                case '5':
-                    echo 'Nie udało się uzupełnić tego produktu';
-                    break;
-                default:
-                    echo 'Wystąpił błąd';
-                    break;
-            }
-            ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if(!empty($params['message'])): ?>
-        <div class="alert alert-success">
-            <?php
-            switch ($params['message']) {
-                case 'logged':
-                    echo 'Zalogowano jako zarządca automatu';
-                    break;
-                case 'logout':
-                    echo 'nastąpiło wylogowanie';
-                    break;
-                case 'updated':
-                    echo 'Uzupełniono wybrany produkt';
-                    break;
-                case 'bought':
-                    echo 'Zakupiono produkt';
-                    break;
-            }
-            ?>
-        </div>
-    <?php endif; ?>
+<div class="container mt-3">
+    <a href="/?action=main" class="logo">
+        <h1 class="text-center">AUTOMAT Z PRZEKĄSKAMI</h1>
+    </a>
+    <?php
+    require_once __DIR__.'/alerts.php';
+    ?>
     <div class="row">
         <div class="col-lg-12">
             <div class="box shadow-lg border border-5 border-black overflow-hidden bg-custom">
@@ -80,24 +39,24 @@
                                 <div class="d-inline-block mt-3">
                                     <label class="money">
                                         <input type="radio" name="radio" value="1">
-                                        <div class="siema text-center">
+                                        <div class="coin d-flex align-items-center rounded-circle justify-content-center">
                                             1Zł
                                         </div>
                                     </label>
                                     <label class="money">
                                         <input type="radio" name="radio" value="2">
-                                        <div class="siema text-center">
+                                        <div class="coin d-flex align-items-center rounded-circle justify-content-center">
                                             2Zł
                                         </div>
                                     </label>
                                     <label class="money">
                                         <input type="radio" name="radio" value="5">
-                                        <div class="siema text-center">
+                                        <div class="coin d-flex align-items-center rounded-circle justify-content-center">
                                             5Zł
                                         </div>
                                     </label><br>
-                                    <button type="button" class="btn btn-info mt-2" id="btn">Wrzuć</button>
-                                    <button type="reset" class="btn btn-info mt-2">Reset</button>
+                                    <button type="button" class="btn btn-outline-info mt-3" id="btn">Wrzuć</button>
+                                    <button type="reset" class="btn btn-outline-info mt-3">Reset</button>
                                 </div>
                             </div>
                             <div class="row mt-4">
@@ -124,17 +83,17 @@
                                 <br>
                                 <div class="d-inline-block mt-2">
                                     <button type="button" class="btn-custom" value="0">0</button>
-                                    <button type="reset" class="btn btn-info">Reset</button>
+                                    <button type="reset" class="btn btn-outline-info">Reset</button>
                                 </div>
                                 <br>
                                 <div class="text-center">
-                                    <input type="submit" class="btn btn-info btn-lg mt-5 w-75">Kup</input>
+                                    <input type="submit" value="Kup" class="btn btn-outline-info btn-lg mt-5 w-75"</input>
                                 </div>
                             </div>
                         </form>
-                        <a class="btn btn-info" href="/?action=fill">Uzupełnij automat</a>
+                        <a href="/?action=fill" class="btn btn-outline-info mt-5">Uzupełnij automat</a>
                         <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']===true): ?>
-                            <a href="/?action=logout">siema</a>
+                            <a class="btn btn-outline-warning mt-5 ms-2" href="/?action=logout">Wyloguj</a>
                         <?php endif; ?>
                     </div>
                 </div>
