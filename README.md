@@ -27,9 +27,9 @@ Using xampp and apache: \
 <Directory path/to/app/automat/templates/assets"> \
         Options Indexes FollowSymLinks \
         AllowOverride All \
-        Require all granted \
+        Require all granted 
 </Directory> \
-        AccessFileName .htaccess \
+        AccessFileName .htaccess 
 </VirtualHost> \
 
 5.Go to C:\Windows\System32\drivers\etc \
