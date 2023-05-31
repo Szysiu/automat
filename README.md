@@ -26,9 +26,9 @@ Using xampp and apache: \
 
 <Directory path/to/app/automat/templates/assets"> \
         Options Indexes FollowSymLinks \
-        AllowOverride All \
+        AllowOverride All 
         Require all granted 
-</Directory> \
+</Directory> 
         AccessFileName .htaccess 
 </VirtualHost> \
 
