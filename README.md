@@ -4,8 +4,8 @@ Using Docker:
 
 1.Clone this repo \
 2.Go inside .docker folder and run "docker compose up -d" to run containers \
-3.Go inside automat-php container using "docker exec -it automat-php bash" or using terminal in docker desktop \
-4.Run "composer install" to download autoload files \
+3.Go inside automat-php container and using "docker exec -it automat-php bash" or using terminal in docker desktop \
+4.Run "composer install" to download autoload files 
 
 ---------------------------------------------------------------------------------------------------------
 
