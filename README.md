@@ -16,23 +16,21 @@ Using xampp and apache: \
 4.Add this vhost configuration: \
 
 <VirtualHost *:80>
-   DocumentRoot "path/to/app/automat/public"
-   ServerName automat.localhost
+        DocumentRoot "path/to/app/automat/public"
+        ServerName automat.localhost
+<Directory "path/to/app/automat/public">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+</Directory>
 
-   <Directory "path/to/app/automat/public">  \
-      Options Indexes FollowSymLinks \
-       AllowOverride All \
-        Require all granted \
-     </Directory> \
- 
-   <Directory path/to/app/automat/templates/assets"> \
-         Options Indexes FollowSymLinks \
-         AllowOverride All \
-         Require all granted \
-     </Directory> \
- 
-   AccessFileName .htaccess
- </VirtualHost> \
+<Directory path/to/app/automat/templates/assets">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+</Directory>
+        AccessFileName .htaccess
+</VirtualHost>
 
 5.Go to C:\Windows\System32\drivers\etc \
 6.Open hosts file in text editor \
