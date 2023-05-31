@@ -1,0 +1,130 @@
+.bg-custom_2 {
+    background: #4b4e6d;
+}
+
+.row-custom {
+    height: 800px;
+}
+
+.card {
+    width: 70px;
+    height: 70px;
+}
+
+.card-img-top {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.money input:checked ~ .coin {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(25, 128, 217, 1) 100%);
+}
+
+.money input {
+    display: none;
+}
+
+.coin {
+    background: lightgray;
+    padding: 10px;
+    border: 2px solid transparent;
+    width: 70px;
+    cursor: pointer;
+    height: 70px;
+    transition: background 0.9s;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 3px #000000;
+}
+
+.btn-custom {
+    background: lightgray;
+    padding: 10px;
+    border: 2px solid transparent;
+    width: 70px;
+    transition: 0.7s;
+    color: white;
+    text-shadow: 0 0 3px #000000;
+}
+
+.btn-custom:hover {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(25, 128, 217, 1) 100%);
+    transition: 0.7s;
+}
+
+.btn-custom :active {
+    background: white;
+    transition: 0.7s;
+}
+
+#orderNumber, #amount {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(25, 128, 217, 1) 100%);
+    color: white;
+    width: 200px;
+}
+
+.bg-custom {
+    background: rgb(14, 15, 73);
+    background: linear-gradient(90deg, rgba(14, 15, 73, 1) 4%, rgba(59, 27, 69, 1) 100%, rgba(8, 0, 36, 1) 100%, rgba(31, 48, 30, 1) 100%);
+}
+
+.col-2 {
+    transition: 0.7s;
+    color: white;
+}
+
+.item {
+    transition: background 0.7s ease;
+}
+
+.item:hover {
+    background: white;
+    color: black;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+}
+
+.coin:hover {
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(25, 128, 217, 1) 100%);
+}
+
+.fa-solid {
+    cursor: pointer;
+    transition: color 0.1s;
+}
+
+.amount-btn {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.fa-solid:hover {
+    color: aqua;
+}
+
+.right-panel {
+    background: #2D3047;
+}
+
+.border-custom {
+    border-bottom: none;
+}
+
+.alert-custom {
+    background: green;
+}
