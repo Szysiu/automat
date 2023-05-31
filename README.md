@@ -1,4 +1,4 @@
-How ro run app
+How to run app
 
 Using Docker:
 
