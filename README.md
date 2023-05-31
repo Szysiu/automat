@@ -15,22 +15,22 @@ Using xampp and apache: \
 3.Open "httpd-vhosts.conf" in text editor \
 4.Add this vhost configuration: 
 ~~~
-<VirtualHost *:80> \
-        DocumentRoot "path/to/app/automat/public" \
-        ServerName automat.localhost \
-<Directory "path/to/app/automat/public"> \
-        Options Indexes FollowSymLinks \
-        AllowOverride All \
-        Require all granted \
-</Directory> \
+<VirtualHost *:80>
+        DocumentRoot "path/to/app/automat/public"
+        ServerName automat.localhost
+    <Directory "path/to/app/automat/public">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
 
-<Directory path/to/app/automat/templates/assets"> \
-        Options Indexes FollowSymLinks \
-        AllowOverride All 
-        Require all granted 
-</Directory> 
-        AccessFileName .htaccess 
-</VirtualHost> \
+    <Directory path/to/app/automat/templates/assets">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+        AccessFileName .htaccess
+</VirtualHost
 
 ~~~
 
