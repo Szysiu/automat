@@ -13,7 +13,7 @@ Using xampp and apache: \
 1.Clone this repo \
 2.Go to C:\xampp\apache\conf\extra \
 3.Open "httpd-vhosts.conf" in text editor \
-4.Add this vhost configuration: \
+4.Add this vhost configuration: 
 
 <VirtualHost *:80>
         DocumentRoot "path/to/app/automat/public"
