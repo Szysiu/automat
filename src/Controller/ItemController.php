@@ -11,7 +11,6 @@ use Automat\Service\ItemService;
 use Automat\Service\UserService;
 use Automat\Utils\AbstractController;
 use Automat\Utils\RequestInterface;
-use Exception;
 use JetBrains\PhpStorm\NoReturn;
 
 

@@ -11,18 +11,18 @@ use Automat\Service\UserService;
 
 
 try {
-    $request=new Request($_GET,$_POST,$_SERVER);
-    $database=new Database();
+    $request = new Request($_GET, $_POST, $_SERVER);
+    $database = new Database();
     $itemService = new ItemService($database);
 
-    $userService=new UserService($database);
+    $userService = new UserService($database);
     $userService->addUser();
-    $loginController=new LoginController($request,$userService);
+    $loginController = new LoginController($request, $userService);
 
-    $controller = new ItemController($itemService,$request,$userService);
+    $controller = new ItemController($itemService, $request, $userService);
     $controller->run();
 
-}catch (Exception $exception) {
+} catch (Exception $exception) {
     echo "Wystąpił błąd";
     exit();
 }
