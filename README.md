@@ -39,4 +39,7 @@ In path/to/app specify where the cloned repo is located
 5.Go to C:\Windows\System32\drivers\etc \
 6.Open hosts file in text editor \
 7.Add this line: 
-127.0.0.1       automat.localhost \
+~~~
+127.0.0.1       automat.localhost 
+~~~
+
