@@ -14,7 +14,7 @@ Using xampp and apache: \
 2.Go to C:\xampp\apache\conf\extra \
 3.Open "httpd-vhosts.conf" in text editor \
 4.Add this vhost configuration: 
-
+~~~
 <VirtualHost *:80> \
         DocumentRoot "path/to/app/automat/public" \
         ServerName automat.localhost \
@@ -31,6 +31,8 @@ Using xampp and apache: \
 </Directory> 
         AccessFileName .htaccess 
 </VirtualHost> \
+
+~~~
 
 5.Go to C:\Windows\System32\drivers\etc \
 6.Open hosts file in text editor \
