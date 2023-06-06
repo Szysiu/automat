@@ -15,5 +15,5 @@ How to run app using Docker: \
 Now you can open app at <kbd>http://localhost:8080</kbd>
 
 Administrator login credentials: \
-Login:admin \
-Password:admin
+Login: <kbd>admin</kbd> \
+Password: <kbd>admin</kbd>
