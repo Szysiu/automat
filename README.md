@@ -1,45 +1,19 @@
-How to run app
+# VENDING MACHINE SIMULATOR
 
-Using Docker:
 
+Simulation application that allows users to insert coins, select and purchase products from a snack vending machine. It also provides the option for a login feature as an administrator to replenish the machine's inventory.
+
+Made with: PHP, JavaScript, SQLITE, HTML, CSS
+
+How to run app using Docker: \
 1.Clone this repo \
-2.Go inside .docker folder and run "docker compose up -d" to run containers \
-3.Go inside automat-php container and using "docker exec -it automat-php bash" or using terminal in docker desktop \
-4.Run "composer install" to download autoload files 
+2.Go inside <kbd>.docker</kbd> directory \
+3.Run <kbd>docker compose up -d</kbd> to start containers \
+4.Go inside <kbd>wklejka-php</kbd> container using <kbd>docker exec -it wklejka-php bash</kbd> or use terminal in Docker Desktop \
+5.Run <kbd>composer install</kbd> to install necessary dependencies \
 
----------------------------------------------------------------------------------------------------------
+Now you can open app at <kbd>http://localhost:8080</kbd>
 
-Using xampp and apache: \
-1.Clone this repo \
-2.Go to C:\xampp\apache\conf\extra \
-3.Open "httpd-vhosts.conf" in text editor \
-4.Add this vhost configuration: 
-~~~
-<VirtualHost *:80>
-        DocumentRoot "path/to/app/automat/public"
-        ServerName automat.localhost
-    <Directory "path/to/app/automat/public">
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-
-    <Directory path/to/app/automat/templates/assets">
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-        AccessFileName .htaccess
-</VirtualHost
-
-~~~
-
-In path/to/app specify where the cloned repo is located
-
-5.Go to C:\Windows\System32\drivers\etc \
-6.Open hosts file in text editor \
-7.Add this line: 
-~~~
-127.0.0.1       automat.localhost 
-~~~
-
+Administrator login credentials: \
+Login:admin
+Password:admin
